@@ -1,0 +1,54 @@
+.menu-main-menu-container a {
+
+    @include tablet {
+        color:$color__border;
+        display:inline; 
+    }
+}
+
+
+.site-footer{
+    // display: flex;
+    // flex-direction: column-reverse;
+    // @include tablet {
+    //     display: flex;
+    //     flex-direction: row-reverse;
+    //     margin-top: 70px;
+    // }
+}
+
+.main-navigation 
+{
+    display: inline-block;
+    width: auto;
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        padding-bottom: 20px;
+        a {
+            border-right: 1px solid white;
+            padding-right: .5rem;
+            padding-left: .5rem;
+        }
+         } @include tablet {
+                 padding-right: 1.5rem;
+                  padding-left: .68rem;
+         }
+}       
+
+
+
+.site-info{
+    @include tablet {
+        width: 400px;
+    }
+}
+
+.footer-inner {
+    display: block;
+         @include tablet {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+                }
+            }

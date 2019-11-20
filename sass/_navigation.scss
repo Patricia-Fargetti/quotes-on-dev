@@ -4,16 +4,20 @@
 
 /* Links */
 
-a {
-	color: $color__link;
+a { 
+	
+    text-decoration: none;
+	color: $color__border;
+	margin-top: 60px;
 
+	
 	&:visited {
-		color: $color__link-visited;
+		color: $color__border;
 	}
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color:  $color__border;
 	}
 	&:focus {
 		outline: thin dotted;
@@ -29,11 +33,10 @@ a {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
 	width: 100%;
 
 	ul {
-		display: none;
+		display: flex;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
@@ -87,6 +90,7 @@ a {
 	a {
 		display: block;
 		text-decoration: none;
+		
 	}
 
 	.current_page_item > a,
@@ -130,3 +134,6 @@ a {
 		width: 50%;
 	}
 }
+
+
+	
