@@ -11,9 +11,23 @@ display: flex;
 }
 .logo{
     display: block;
-    width: 300px;}
+    width: 300px;
+        @include desktop{
+            margin: 0 auto;
+            width: 700px;
+        }
+    }
+
+
 
 .container{
     padding: 2.5%;
     width: 100%;
+        @include desktop{
+        margin: 0 auto;
+        max-width: 1080px;
+        padding: 2.5%;
+        width: 100%;
+        }
+
 }

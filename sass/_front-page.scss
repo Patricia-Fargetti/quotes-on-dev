@@ -4,3 +4,53 @@ font-family:$font__main ;
 font-size:$font_size;
 
 }
+.entry-content{
+        @include desktop{
+            font-size: 2rem;
+            margin-top: 4rem;
+        
+     }
+}
+
+// .fa-quote-left::before{
+//     @include desktop{
+//         display: inline;
+//     }
+// }
+// .fa-quote-right::after{
+//     @include desktop{
+//         display: inline;
+//     }
+// }
+.site-content{
+    @include desktop{
+        margin: 4.5rem 175px 1.5rem;
+    position: relative;
+          &:before{
+            font-family: "FontAwesome";
+            content: "\f10d";
+            position: absolute;
+            color: $color__border;
+            left:-175px;
+            top: 0px;
+            font-size: $icon;
+          }
+        &:after{
+            font-family:"FontAwesome";
+            content: "\f10e";
+            position: absolute;
+            color: $color__border;
+            top:0px ;
+            right: -175px;
+            font-size: $icon;
+         }
+   
+    }
+
+}
+ 
+
+
+
+
+

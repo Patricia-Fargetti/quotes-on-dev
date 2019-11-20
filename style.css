@@ -600,15 +600,45 @@ body {
   font-family: "Exo", sans-serif;
   font-size: 16px; }
 
+@media (min-width: 1000px) {
+  .entry-content {
+    font-size: 2rem;
+    margin-top: 4rem; } }
+
+@media (min-width: 1000px) {
+  .site-content {
+    margin: 4.5rem 175px 1.5rem;
+    position: relative; }
+    .site-content:before {
+      font-family: "FontAwesome";
+      content: "\f10d";
+      position: absolute;
+      color: #0c0;
+      left: -175px;
+      top: 0px;
+      font-size: 125px; }
+    .site-content:after {
+      font-family: "FontAwesome";
+      content: "\f10e";
+      position: absolute;
+      color: #0c0;
+      top: 0px;
+      right: -175px;
+      font-size: 125px; } }
+
 @media (min-width: 600px) {
   .menu-main-menu-container a {
     color: #0c0;
     display: inline; } }
 
-.main-navigation {
+@media (min-width: 600px) {
+  .site-footer {
+    margin-top: 50px; } }
+
+.site-footer .main-navigation {
   display: inline-block;
   width: auto; }
-  .main-navigation ul {
+  .site-footer .main-navigation ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -616,18 +646,20 @@ body {
         -ms-flex-pack: start;
             justify-content: flex-start;
     padding-bottom: 20px; }
-    .main-navigation ul a {
+    .site-footer .main-navigation ul a {
       border-right: 1px solid white;
       padding-right: .5rem;
       padding-left: .5rem; }
   @media (min-width: 600px) {
-    .main-navigation {
+    .site-footer .main-navigation {
       padding-right: 1.5rem;
       padding-left: .68rem; } }
 
-@media (min-width: 600px) {
-  .site-info {
-    width: 400px; } }
+.site-footer .site-info {
+  padding-left: 10px; }
+  @media (min-width: 600px) {
+    .site-footer .site-info {
+      width: 250px; } }
 
 .footer-inner {
   display: block; }
@@ -654,7 +686,17 @@ body {
 .logo {
   display: block;
   width: 300px; }
+  @media (min-width: 1000px) {
+    .logo {
+      margin: 0 auto;
+      width: 700px; } }
 
 .container {
   padding: 2.5%;
   width: 100%; }
+  @media (min-width: 1000px) {
+    .container {
+      margin: 0 auto;
+      max-width: 1080px;
+      padding: 2.5%;
+      width: 100%; } }
