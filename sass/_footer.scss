@@ -33,7 +33,6 @@
             padding-left: .5rem;
         }
          } @include tablet {
-                 padding-right: 1.5rem;
                   padding-left: .68rem;
          }
 }       
@@ -56,4 +55,8 @@
             width: 100%;
             flex-wrap: wrap;
                 }
+            @include desktop{
+            justify-content: flex-end;
+
             }
+        }

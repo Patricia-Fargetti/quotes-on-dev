@@ -32,7 +32,7 @@ font-size:$font_size;
             position: absolute;
             color: $color__border;
             left:-175px;
-            top: 0px;
+            top: -61px;
             font-size: $icon;
           }
         &:after{
@@ -40,7 +40,7 @@ font-size:$font_size;
             content: "\f10e";
             position: absolute;
             color: $color__border;
-            top:0px ;
+            top: -61px;
             right: -175px;
             font-size: $icon;
          }

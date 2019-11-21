@@ -79,9 +79,9 @@ function qod_scripts()
 	));
 }
 
-
-
 add_action('wp_enqueue_scripts', 'qod_scripts');
+
+
 //look at the WP REST API slides or the wp-2017-rest theme in function.php for more info
 
 // function qod_page()

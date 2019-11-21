@@ -18,7 +18,7 @@
 			<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
 		</nav><!-- #site-navigation -->
 		<div class="site-info">
-			Brought to you by <a href="<?php echo esc_url('https://wordpress.org/'); ?>">REDAcademy</a>
+			Brought to you by <a href="<?php echo esc_url('https://redacademy.com/vancouver/'); ?>">REDAcademy</a>
 		</div><!-- .site-info -->
 	</div>
 

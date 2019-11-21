@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the Archives page.
  *
@@ -7,23 +8,24 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
+   <main id="main" class="site-main" role="main">
 
-         <section class="browse-archives">
-            <header class="entry-header">
-         		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-         	</header><!-- .entry-header -->
-
+      <section class="browse-archives">
+         <header class="entry-header">
+            <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+         </header><!-- .entry-header -->
+         <div class="container-content">
             <div class="post-archives clearfix">
                <h2>Quote Authors</h2>
                <ul>
-               <?php
-                  $posts = get_posts( 'posts_per_page=-1' );
-                  foreach( $posts as $post ) : setup_postdata( $post );
-               ?>
-                  <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-               <?php endforeach; wp_reset_postdata(); ?>
+                  <?php
+                  $posts = get_posts('posts_per_page=-1');
+                  foreach ($posts as $post) : setup_postdata($post);
+                     ?>
+                     <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+                  <?php endforeach;
+                  wp_reset_postdata(); ?>
                </ul>
             </div>
 
@@ -36,16 +38,17 @@ get_header(); ?>
 
             <div class="tag-archives clearfix">
                <h2>Tags</h2>
-               <?php wp_tag_cloud( array(
+               <?php wp_tag_cloud(array(
                   'smallest' => 1,
                   'largest' => 1,
                   'unit' => 'rem',
                   'format' => 'list'
-               ) ); ?>
+               )); ?>
             </div>
-         </section>
+         </div>
+      </section>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+   </main><!-- #main -->
+</div><!-- #primary -->
 
 <?php get_footer(); ?>
