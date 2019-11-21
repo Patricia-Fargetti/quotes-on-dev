@@ -27,22 +27,24 @@ font-size:$font_size;
         margin: 4.5rem 175px 1.5rem;
     position: relative;
           &:before{
-            font-family: "FontAwesome";
+            font-family: "Font Awesome 5 Free";
             content: "\f10d";
             position: absolute;
             color: $color__border;
             left:-175px;
             top: -61px;
             font-size: $icon;
+            font-weight: 900;
           }
         &:after{
-            font-family:"FontAwesome";
+            font-family:"Font Awesome 5 Free";
             content: "\f10e";
             position: absolute;
             color: $color__border;
             top: -61px;
             right: -175px;
             font-size: $icon;
+            font-weight: 900;
          }
    
     }

@@ -45,8 +45,9 @@ input[type="password"],
 input[type="search"],
 textarea {
 	color: #666;
-	border: 1px solid #ccc;
+	border: 1px solid $color__border;
 	border-radius: 3px;
+	background: $color__background-body;
 
 	&:focus {
 		color: #111;
@@ -58,10 +59,31 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-	padding: 3px;
+	padding: 5px;
 }
 
 textarea {
 	padding-left: 3px;
 	width: 100%;
+}
+
+.all-fields-container{
+	display: flex;
+	flex-direction: column;
+}
+label{
+	padding-top: 20px;
+	padding-bottom: 15px;
+		@include desktop{
+			padding-bottom: 15px;
+		}
+}
+.sub-btn{
+	margin-top: 20px;
+		@include desktop{
+			
+		}
+}
+.fa-search{
+	border-color: $color__background-body;
 }

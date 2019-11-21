@@ -61,7 +61,7 @@ add_filter('stylesheet_uri', 'qod_minified_css', 10, 2);
 function qod_scripts()
 {
 	wp_enqueue_style('qod-style', get_stylesheet_uri());
-	wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+	wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css');
 
 	wp_enqueue_script('qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true);
 
