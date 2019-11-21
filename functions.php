@@ -62,24 +62,35 @@ function qod_scripts()
 {
 	wp_enqueue_style('qod-style', get_stylesheet_uri());
 	wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
-	wp_enqueue_script('qod-starter-script', get_template_directory_uri() . '/build/js/qod.min.js', array('jquery'), '', true);
 
 	wp_enqueue_script('qod-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true);
 
 	wp_enqueue_script('qod-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true);
 
-	// here is where you localized script code will go ,reference this script qod-script
-	wp_localize_script('qod-starter-script', 'api_vars', array(
-		'nonce' => wp_create_nonce('wp_rest'),
+	$script_url = get_template_directory_uri() . '/build/js/qod.min.js';
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('rest_comments', $script_url, array('jquery'), false, true);
+	wp_localize_script('rest_comments', 'api_vars', array(
 		'rest_url' => rest_url(),
-		'success' => 'function',
-		'failure' => 'Your submission could not be processed.',
+		'wpapi_nonce' => wp_create_nonce('wp_rest'),
+		'post_id' => get_the_ID(),
+		'user_id' => get_current_user_id(),
+		'comments_open' => comments_open(get_the_ID()),
 	));
 }
 
-//look at the WP REST API slides or the wp-2017-rest theme in function.php for more info
+
 
 add_action('wp_enqueue_scripts', 'qod_scripts');
+//look at the WP REST API slides or the wp-2017-rest theme in function.php for more info
+
+// function qod_page()
+// {
+
+// }
+// add_action('wp_enqueue_scripts', 'qod_page');
+
+
 
 /**
  * Custom functions that act independently of the theme templates.

@@ -626,6 +626,9 @@ body {
       right: -175px;
       font-size: 125px; } }
 
+a {
+  color: #0c0; }
+
 @media (min-width: 600px) {
   .menu-main-menu-container a {
     color: #0c0;
