@@ -1,8 +1,26 @@
 # Quotes on Dev Starter
+Quotes on Dev project is the 4th project that I have developed at Red Academy. In this project we had to build a wordpress website that displays famous quotes and allows users to also post their own quotes.
 
-A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+## Technologies used :
+- HTML
+- SASS (enabling the use of variables and mixins)
+- PHP
+- Rest API
+- Ajax
+- Javascript
+- JQuery
+- GULP
+- Wordpress
 
-## Installation
+## Personal Learnings:
+ I used the Ajax request method GET to display quotes that were stored in our database in the website's frontpage.I had to use a function to first localize the script(get data from server side to client side ),  and enqueue it.
+ Also I learned how to POST data from our database and display it in the page and how to add a History API.
+ The History API is very useful in case someone wants to check what was the previous quote by just clicking the previous arrow, also it is possible to costumize the URL.
+
+
+## Installation Instructions
+### For the starter theme (from Underscores):
+------------------------------------------------
 
 ### 1. Download me (don't clone me!)
 
