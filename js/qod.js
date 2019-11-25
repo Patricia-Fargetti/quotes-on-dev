@@ -1,17 +1,20 @@
 (function ($) {
-
+    let lastPage = '';
 
     // 1: get request to grab random post and append to the DOM
     function getRandomQuote() {
+
+
+        lastPage = document.URL;
+
         $.ajax({
             method: "GET",
             url: api_vars.rest_url + 'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1'
         }).done(function (data) {
-            // console.log(data);
+
             $(".source").empty();
 
             let postObject = data[0]//.shift() and [0] is the same
-            console.log(postObject);
 
             const postSource = data[0];
             const postUrl = data[0];
@@ -32,18 +35,27 @@
             }
             addsource();
 
+            history.pushState(null, null, postObject.slug);
+            //1st value is an object hwich manages state
+            //2nd value is the url title browser tab
+            // 3rd value is the url in the browser
+
 
 
         }).fail(function (error) {
             console.log("an error occurred", error);
-        });
+        }); // ajax
+
+
     }
+
 
 
     $('#new-quote-button').on('click', function (event) {
         event.preventDefault();
         getRandomQuote();
-    });
+
+    });//the end of button click
 
 
     $('#quote-submission-form').on('submit', function (event) {
@@ -63,12 +75,18 @@
             }
         }).done(function (response) {
             console.log(response);
-            alert('Success! Comments are closed for this post.');
+            alert('Success! ');
         }).fail(function (response) {
             alert('please fill out all the required fields.');
         })
     });
+    $(window).on('popstate', function () {
+        //update the url
+        window.location.replace(lastPage);
+
+    });
 })(jQuery);
+
 
 // IIFE Immediatley Invoked Function Expression
 // Invoked also means calling a function or just running a function

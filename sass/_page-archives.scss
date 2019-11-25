@@ -2,7 +2,13 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    padding: 0;}
+    padding: 0;
+    width: 390px;
+        @include tablet{
+
+            width:890px;
+        }
+    }
     .page-template-default .container-content li{
         margin-right: 18px;
     }
